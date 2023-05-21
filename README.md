@@ -1,9 +1,9 @@
 # Hijri-Date-Gnome-Extension
 Display the Hijri date in the top panel
-# My Hijri Date Extension
+Hijri Date Extension
 
 ## Description
-My Hijri Date Extension is a GNOME Shell extension that displays the current Hijri date in the top panel of the GNOME Shell.
+Hijri Date Extension is a GNOME Shell extension that displays the current Hijri date in the top panel of the GNOME Shell.
 
 ## Features
 - Shows the current Hijri date in the top panel.
