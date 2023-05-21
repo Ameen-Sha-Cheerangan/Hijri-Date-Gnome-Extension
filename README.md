@@ -9,9 +9,6 @@ My Hijri Date Extension is a GNOME Shell extension that displays the current Hij
 - Shows the current Hijri date in the top panel.
 - Updates the date automatically based on the system time.
 
-## Requirements
-- GNOME Shell version 42.5 or later.
-
 ## Installation
 1. Download or clone the repository to your local machine.
 2. Open a terminal and navigate to the extension directory.
