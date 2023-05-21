@@ -17,8 +17,6 @@ My Hijri Date Extension is a GNOME Shell extension that displays the current Hij
 2. Open a terminal and navigate to the extension directory.
 3. Enable the extension by running the following commands:
     gnome-extensions enable my-hijri-date-extension@ameen-sha
-    
-(Replace `yourname` with your desired extension identifier)
 4. Restart the GNOME Shell by pressing Alt+F2, typing `r`, and pressing Enter.
 
 ## Usage
