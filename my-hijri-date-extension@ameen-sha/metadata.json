@@ -1,0 +1,13 @@
+{
+  "shell-version": [
+    "42",
+    "3.36",
+    "3.38",
+    "40"
+  ],
+  "uuid": "my-hijri-date-extension@ameen-sha",
+  "name": "Hijri Date Extension",
+  "description": "Display the Hijri date in the top panel.",
+  "url": "https://github.com/Ameen-Sha-Cheerangan/Hijri-Date-Gnome-Extension",
+  "version": 1
+}
