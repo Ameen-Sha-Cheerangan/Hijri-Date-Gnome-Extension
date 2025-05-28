@@ -87,7 +87,7 @@ Before installing any GNOME Shell extension, please ensure the following:
 
 ### **A. Install via GNOME Extensions Website (Recommended)**
 
-1. Visit [Hijri Date Extension on extensions.gnome.org](https://extensions.gnome.org/extension/YOUR-EXTENSION-ID/)  
+1. Visit [Hijri Date Extension on extensions.gnome.org](https://extensions.gnome.org/extension/5995/hijri-date-extension/)  
    *(Replace with your actual extension URL)*
 2. Click the toggle to install.
 3. Approve the installation in your browser and GNOME Shell.
