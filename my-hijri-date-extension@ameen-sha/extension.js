@@ -26,10 +26,10 @@ function setDate() {
 
 function init() {
     // Initialize GSettings
-    settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.my-hijri-date-extension');
 }
 
 function enable() {
+    settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.my-hijri-date-extension');
     dateLabel = new St.Label({
         style_class: "hijri-date-label",
     });
@@ -54,4 +54,5 @@ function disable() {
     Main.panel._leftBox.remove_child(dateLabel);
     dateLabel.destroy();
     dateLabel = null;
+    settings = null;
 }
