@@ -91,10 +91,3 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 **Enjoy your customizable Hijri date in GNOME!**
-
----
-
-Let me know if you want a more concise or more detailed version, or if you want to add screenshots or GIFs!
-
----
-Answer from Perplexity: pplx.ai/share
