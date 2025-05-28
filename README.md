@@ -141,10 +141,15 @@ If you have suggestions, improvements, or bug fixes, please [open an issue](http
 
 ---
 
+## ⭐ Support
+
+If you like this extension, please star the repo on [GitHub](https://github.com/Ameen-Sha-Cheerangan/Hijri-Date-Gnome-Extension)!  
+It helps more users find it and motivates further improvements.
+
+---
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-
-**Enjoy your customizable Hijri date in GNOME!**
