@@ -27,6 +27,64 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
 
 ## Installation
 
+### Prerequisites
+
+Before installing any GNOME Shell extension, please ensure the following:
+
+1. **GNOME Shell Desktop:**  
+   You are running a GNOME-based desktop environment.  
+   Check your version with:
+   ```sh
+   gnome-shell --version
+   ```
+   Make sure your version is listed in the `"shell-version"` field of this extension’s `metadata.json`.
+
+2. **Extensions App (Recommended):**  
+   For easy management of extensions, install the Extensions app:
+   - **Ubuntu/Debian:**  
+     ```sh
+     sudo apt install gnome-shell-extension-prefs
+     ```
+   - **Fedora:**  
+     ```sh
+     sudo dnf install gnome-extensions-app
+     ```
+   - **Arch:**  
+     ```sh
+     sudo pacman -S gnome-extensions
+     ```
+
+3. **Browser Integration (for Website Install):**  
+   To install extensions directly from [extensions.gnome.org](https://extensions.gnome.org/), you need:
+   - The [GNOME Shell integration browser add-on](https://wiki.gnome.org/Projects/GnomeShellIntegration/Installation) (available for Firefox, Chrome, Chromium, etc.)
+   - The native host connector:
+     - **Ubuntu/Debian:**  
+       ```sh
+       sudo apt install gnome-browser-connector
+       ```
+     - **Fedora/Arch:**  
+       ```sh
+       sudo dnf install chrome-gnome-shell
+       ```
+       or  
+       ```sh
+       sudo pacman -S chrome-gnome-shell
+       ```
+
+4. **Restart GNOME Shell:**  
+   After installing new extensions or making changes, restart GNOME Shell:
+   - On Xorg: Press `Alt+F2`, type `r`, and press Enter.
+   - On Wayland: Log out and log back in.
+
+---
+
+**If you encounter issues:**  
+- Double-check the prerequisites above.
+- Make sure your GNOME Shell version is supported by the extension.
+- Try restarting GNOME Shell or your computer.
+
+---
+
 ### **A. Install via GNOME Extensions Website (Recommended)**
 
 1. Visit [Hijri Date Extension on extensions.gnome.org](https://extensions.gnome.org/extension/YOUR-EXTENSION-ID/)  
