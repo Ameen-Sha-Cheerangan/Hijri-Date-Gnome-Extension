@@ -1,0 +1,15 @@
+<schemalist>
+    <schema id="org.gnome.shell.extensions.my-hijri-date-extension"
+        path="/org/gnome/shell/extensions/my-hijri-date-extension/">
+        <key name="date-adjustment" type="i">
+            <default>0</default>
+            <summary>Hijri date adjustment</summary>
+            <description>Adjust the Hijri date by this many days to match local moonsighting.</description>
+        </key>
+        <key name="mycolor" type="s">
+            <default>"rgba(255, 255, 255, 1)"</default>
+            <summary>User-selected color</summary>
+            <description>Color selected by the user in RGBA format.</description>
+        </key>
+    </schema>
+</schemalist>
