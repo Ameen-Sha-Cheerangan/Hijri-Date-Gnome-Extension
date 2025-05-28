@@ -56,7 +56,7 @@ Before installing any GNOME Shell extension, please ensure the following:
 
 3. **Browser Integration (for Website Install):**  
    To install extensions directly from [extensions.gnome.org](https://extensions.gnome.org/), you need:
-   - The [GNOME Shell integration browser add-on](https://wiki.gnome.org/Projects/GnomeShellIntegration/Installation) (available for Firefox, Chrome, Chromium, etc.)
+   - To install extensions from your browser (Chromium or Chrome), visit extensions.gnome.org. If prompted, follow the instructions to enable GNOME Shell integration in your browser.
    - The native host connector:
      - **Ubuntu/Debian:**  
        ```sh
