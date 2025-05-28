@@ -2,6 +2,8 @@
 Display the Hijri date in the top panel
 Hijri Date Extension
 
+There will be some difference in date due to differnce in moon sightings in your area. So, don't use this for any important purposes, it is rough estimate only using API
+
 ## Description
 Hijri Date Extension is a GNOME Shell extension that displays the current Hijri date in the top panel of the GNOME Shell.
 
