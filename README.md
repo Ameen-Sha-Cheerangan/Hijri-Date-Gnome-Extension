@@ -1,6 +1,11 @@
 ---
 
 # Hijri-Date-Gnome-Extension
+[![Available on GNOME Extensions](https://img.shields.io/badge/GNOME%20Extensions-Available-brightgreen?logo=gnome)](https://extensions.gnome.org/extension/5995/hijri-date-extension/)
+
+> 📦 **Officially published on [extensions.gnome.org](https://extensions.gnome.org/extension/5995/hijri-date-extension/)!**
+>
+> For the easiest installation and updates, use the official GNOME Extensions website.
 
 Display the Hijri date in the GNOME top panel.
 
