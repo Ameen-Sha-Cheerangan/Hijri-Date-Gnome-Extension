@@ -147,6 +147,12 @@ If you have suggestions, improvements, or bug fixes, please [open an issue](http
 
 ---
 
+## Credits
+
+Thanks to the developer for : https://github.com/mourner/suncalc . Used it for calculating the sunset time given the longitude and latitude.
+
+---
+
 ## ⭐ Support
 
 If you like this extension, please star the repo on [GitHub](https://github.com/Ameen-Sha-Cheerangan/Hijri-Date-Gnome-Extension)!  
