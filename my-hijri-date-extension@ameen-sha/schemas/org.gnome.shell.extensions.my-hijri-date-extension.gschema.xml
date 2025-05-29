@@ -11,5 +11,15 @@
             <summary>User-selected color</summary>
             <description>Color selected by the user in RGBA format.</description>
         </key>
+        <key name="latitude" type="d">
+            <default>0.0</default>
+            <summary>Latitude</summary>
+            <description>User's latitude for sunset calculation (optional, for improved accuracy).</description>
+        </key>
+        <key name="longitude" type="d">
+            <default>0.0</default>
+            <summary>Longitude</summary>
+            <description>User's longitude for sunset calculation (optional, for improved accuracy).</description>
+        </key>
     </schema>
 </schemalist>
