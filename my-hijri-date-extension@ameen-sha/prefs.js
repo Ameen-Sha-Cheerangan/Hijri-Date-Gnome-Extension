@@ -5,15 +5,6 @@ const Gdk = imports.gi.Gdk;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = imports.misc.extensionUtils.getCurrentExtension();
 
-let cssProvider = new Gtk.CssProvider();
-cssProvider.load_from_path(Me.path + '/stylesheet.css');
-Gtk.StyleContext.add_provider_for_display(
-    Gdk.Display.get_default(),
-    cssProvider,
-    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-);
-
-
 function init() { }
 
 function createRow(title, desc, control, use_markup = false) {
@@ -70,6 +61,15 @@ function createRow(title, desc, control, use_markup = false) {
 }
 
 function buildPrefsWidget() {
+
+    let cssProvider = new Gtk.CssProvider();
+    cssProvider.load_from_path(Me.path + '/stylesheet.css');
+    Gtk.StyleContext.add_provider_for_display(
+        Gdk.Display.get_default(),
+        cssProvider,
+        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+    );
+
     let settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.my-hijri-date-extension');
 
     let sizeGroup = new Gtk.SizeGroup({ mode: Gtk.SizeGroupMode.HORIZONTAL });
