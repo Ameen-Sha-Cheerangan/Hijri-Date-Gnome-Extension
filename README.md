@@ -75,7 +75,9 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
 ### **1. Adjusting the Hijri Date for Local Moon Sighting**
 
 - Click on the date view in top panel , to see the drop down menu to go to the settings. OR  Right-click the extension in the Extensions app and select the **gear icon** (Preferences), or run:
-  ```  sh  gnome-extensions prefs my-hijri-date-extension@ameen-sha  ```
+  ```sh
+  gnome-extensions prefs my-hijri-date-extension@ameen-sha
+  ```
 - In the preferences dialog, use the **"Hijri Date Adjustment (days)"** spin button to shift the date forward or backward (e.g., +1 or -1) to match your local moon sighting.
 
 ### **2. Customizing the Date Color**
