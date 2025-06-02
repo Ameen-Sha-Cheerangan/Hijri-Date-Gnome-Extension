@@ -148,13 +148,6 @@ Please [open an issue](https://github.com/Ameen-Sha-Cheerangan/Hijri-Date-Gnome-
 
 ---
 
-## Credits
-
-- **SunCalc Library**: Thanks to [Vladimir Agafonkin](https://github.com/mourner/suncalc) for the sunset calculation library
-- **Islamic Calendar API**: Utilizes JavaScript's built-in Intl.DateTimeFormat Islamic calendar support
-
----
-
 ## ⭐ Support
 
 If you find this extension useful:
