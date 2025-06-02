@@ -56,11 +56,14 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
    ```sh
    cp -r Hijri-Date-Gnome-Extension/my-hijri-date-extension@ameen-sha ~/.local/share/gnome-shell/extensions/
    ```
-3. Enable the extension:
+3. Restart GNOME Shell:
+   - On Xorg: Press `Alt+F2`, type `r`, and press Enter.
+   - On Wayland: Log out and log back in.
+44. Enable the extension:
    ```sh
    gnome-extensions enable my-hijri-date-extension@ameen-sha
    ```
-4. Restart GNOME Shell:
+5. Restart GNOME Shell:
    - On Xorg: Press `Alt+F2`, type `r`, and press Enter.
    - On Wayland: Log out and log back in.
 
