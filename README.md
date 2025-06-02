@@ -36,6 +36,7 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
 
 
 ### **A. Install via GNOME Extensions Website **
+
    #### Prerequisites
    - Search in internet for understanding how to use gnome extension for you distro with gnome extension. 
    - Make sure that the extension is supported( You can check the metadata.json) for the gnome shell version that are supported
