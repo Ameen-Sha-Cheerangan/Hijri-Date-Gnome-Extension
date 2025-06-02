@@ -169,5 +169,33 @@ function buildPrefsWidget() {
         true
     ));
 
+    // Panel Position Row
+    let positionContainer = new Gtk.Box({
+        orientation: Gtk.Orientation.HORIZONTAL,
+        halign: Gtk.Align.END,
+        width_request: 150
+    });
+
+    let positionCombo = new Gtk.ComboBoxText({
+        hexpand: true
+    });
+    positionCombo.append('left', 'Left Side');
+    positionCombo.append('right', 'Right Side');
+    positionCombo.set_active_id(settings.get_string('panel-position'));
+    positionCombo.connect('changed', () => {
+        settings.set_string('panel-position', positionCombo.get_active_id());
+    });
+
+    positionContainer.append(positionCombo);
+    sizeGroup.add_widget(positionContainer);
+
+    box.append(createRow(
+        "Panel Position",
+        "Select your preferred location for the Hijri date display in the top panel",
+        positionContainer
+    ));
+
+
+
     return box;
 }
