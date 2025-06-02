@@ -21,13 +21,23 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
 
 ---
 
+
 ## Features
 
 - **Displays the current Hijri date** in the GNOME top panel.
 - **User-adjustable date offset** to match local moon sighting (±3 days).
 - **Color customization**: Pick your preferred date color using a color picker.
-- **Automatic daily update** based on system time.
+- **Location-based sunset calculation**: Provide latitude/longitude for accurate Islamic day transitions.
+- **Panel positioning**: Choose left or right side placement in the top panel.
+- **Automatic daily update** based on system time and sunset calculations.
 - **Easy configuration** through a graphical preferences dialog.
+
+---
+
+## System Requirements
+
+- **GNOME Shell**: Version 42-43
+- **Dependencies**: No additional packages required (SunCalc library included)
 
 ---
 
@@ -87,6 +97,7 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
 
 ### **3. Automatic Updates**
 
+- Give the correct latitude and longitude 
 - The extension updates the Hijri date automatically based on your system time.
 - No manual refresh is needed.
 
