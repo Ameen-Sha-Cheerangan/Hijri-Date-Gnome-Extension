@@ -8,11 +8,9 @@
 > For the easiest installation and updates, use the official GNOME Extensions website.
 
 Display the Hijri date in the GNOME top panel.
-### Extension in Top Panel
-![Extension in Panel](images/screenshot.png)
 
-### Preferences Dialog
-![Preferences Dialog](images/preferences.png)
+![Extension in Panel](![image](https://github.com/user-attachments/assets/cc8bd6a6-61a4-41f5-b9ae-66af21a50b8c))
+
 
 > **Note:**  
 > The Hijri date may differ by one or more days depending on local moon sightings. This extension uses a standard algorithm and provides an option to adjust the date for your region. **Do not use for important things.**
