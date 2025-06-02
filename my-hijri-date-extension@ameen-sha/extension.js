@@ -5,17 +5,82 @@ const Me = imports.misc.extensionUtils.getCurrentExtension();
 const GLib = imports.gi.GLib;  // ADD THIS LINE
 Me.imports.suncalc;
 
+
+const PanelMenu = imports.ui.panelMenu;
+const PopupMenu = imports.ui.popupMenu;
+const GObject = imports.gi.GObject;
+
+
 let dateLabel;
 let settings;
-let settingsChangedSignal;
-let colorChangedSignal;
-let latChangedSignal;
-let lonChangedSignal;
 let periodicTimeout;  // ADD THIS LINE
 
 // Default values of Holy city of Mecca
 const DEFAULT_LATITUDE = 21.4224779;
 const DEFAULT_LONGITUDE = 39.8251832;
+
+const HijriDateIndicator = GObject.registerClass(
+    class HijriDateIndicator extends PanelMenu.Button {
+        _init() {
+            super._init(0.0, 'HijriDateIndicator', false);
+
+            this._settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.my-hijri-date-extension');
+
+            // Create the main label that appears in the panel
+            this.dateLabel = new St.Label({
+                style_class: 'hijri-date-label',
+                y_align: St.Align.MIDDLE
+            });
+
+            this.add_child(this.dateLabel);
+
+            // Add a simple menu item
+            this.settingsItem = new PopupMenu.PopupMenuItem('🌙 Open Settings');
+            this.menu.addMenuItem(this.settingsItem);
+
+            // Connect the menu item to open preferences
+            this.settingsItem.connect('activate', () => {
+                ExtensionUtils.openPrefs();
+            });
+
+            // Set up settings connections
+            this._settings.connect('changed::date-adjustment', () => this._updateDate());
+            this._settings.connect('changed::mycolor', () => this._updateDate());
+            this._settings.connect('changed::latitude', () => this._updateDate());
+            this._settings.connect('changed::longitude', () => this._updateDate());
+
+            // Initial date update
+            this._updateDate();
+        }
+
+        _updateDate() {
+            const change = this._settings.get_int('date-adjustment');
+            const [latitude, longitude] = getLatLon();
+
+            const currentDate = new Date();
+            let sunset = getSunsetTime(new Date(), latitude, longitude);
+
+            let hijriDate = new Date(currentDate);
+            if (currentDate >= sunset) {
+                hijriDate.setDate(hijriDate.getDate() + 1);
+            }
+
+            hijriDate.setDate(hijriDate.getDate() + change);
+            const formatter = new Intl.DateTimeFormat("ar-IN-u-ca-islamic", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+            });
+            const modifiedHijriDate = formatter.format(hijriDate);
+
+            // Get color from settings
+            let color = this._settings.get_string('mycolor') || 'rgb(212, 215, 155)';
+            this.dateLabel.set_style(`color: ${color};`);
+            this.dateLabel.set_text(`${modifiedHijriDate}`);
+        }
+    }
+);
+
 
 function getLatLon() {
     let latitude = settings.get_double('latitude');
@@ -60,8 +125,7 @@ function setDate() {
     const [latitude, longitude] = getLatLon();
 
     const currentDate = new Date();
-    let times = SunCalc.getTimes(new Date(), latitude, longitude);
-    let sunset = times.sunset;
+    let sunset = getSunsetTime(new Date(), latitude, longitude);
 
     let hijriDate = new Date(currentDate);
     if (currentDate >= sunset) {
@@ -86,48 +150,55 @@ function init() {
 
 function enable() {
     settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.my-hijri-date-extension');
-    dateLabel = new St.Label({
-        style_class: "hijri-date-label",
+    dateLabel = new HijriDateIndicator();
+
+    // Get position from settings
+    let position = settings.get_string('panel-position') || 'left';
+    let area = position === 'right' ? 'right' : 'left';
+    let index = position === 'right' ? 0 : 1;
+
+    Main.panel.addToStatusArea('hijri-date-indicator', dateLabel, index, area);
+
+    // Listen for position changes and recreate the indicator
+    settings.connect('changed::panel-position', () => {
+        // Remove current indicator
+        if (dateLabel) {
+            dateLabel.destroy();
+        }
+
+        // Create new indicator with new position
+        dateLabel = new HijriDateIndicator();
+        let newPosition = settings.get_string('panel-position') || 'left';
+        let newArea = newPosition === 'right' ? 'right' : 'left';
+        let newIndex = newPosition === 'right' ? 0 : 1;
+
+        Main.panel.addToStatusArea('hijri-date-indicator', dateLabel, newIndex, newArea);
     });
-    setDate();
-    Main.panel._leftBox.insert_child_at_index(dateLabel, 1);
-    Main.panel._leftBox.set_child_at_index(dateLabel, 1);
-    // Listen for changes in the setting and update date
-    settingsChangedSignal = settings.connect('changed::date-adjustment', setDate);
-    colorChangedSignal = settings.connect('changed::mycolor', setDate);
-    latChangedSignal = settings.connect('changed::latitude', setDate);
-    lonChangedSignal = settings.connect('changed::longitude', setDate);
-    // Add periodic refresh every 60 seconds to catch sunset transitions
+
     periodicTimeout = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 60, () => {
-        setDate();
-        return GLib.SOURCE_CONTINUE; // Keep the timeout running
+        try {
+            if (dateLabel && dateLabel._updateDate) {
+                dateLabel._updateDate();
+            } else {
+                setDate();
+            }
+        } catch (error) {
+            log(`Periodic update error: ${error}`);
+        }
+        return GLib.SOURCE_CONTINUE;
     });
 }
 
 function disable() {
-    if (settingsChangedSignal) {
-        settings.disconnect(settingsChangedSignal);
-        settingsChangedSignal = null;
-    }
-    if (colorChangedSignal) {
-        settings.disconnect(colorChangedSignal);
-        colorChangedSignal = null;
-    }
-    if (latChangedSignal) {
-        settings.disconnect(latChangedSignal);
-        latChangedSignal = null;
-    }
-    if (lonChangedSignal) {
-        settings.disconnect(lonChangedSignal);
-        lonChangedSignal = null;
-    }
-    // ADD THESE LINES
     if (periodicTimeout) {
         GLib.source_remove(periodicTimeout);
         periodicTimeout = null;
     }
-    Main.panel._leftBox.remove_child(dateLabel);
-    dateLabel.destroy();
-    dateLabel = null;
+
+    if (dateLabel) {
+        dateLabel.destroy();
+        dateLabel = null;
+    }
+
     settings = null;
 }
