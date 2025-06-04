@@ -72,7 +72,7 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
    ```
 2. Copy the extension folder to your local GNOME extensions directory:
    ```sh
-   cp -r Hijri-Date-Gnome-Extension/my-hijri-date-extension@ameen-sha ~/.local/share/gnome-shell/extensions/
+   cp -r Hijri-Date-Gnome-Extension/my-hijri-date-extension@ameen-sha/ ~/.local/share/gnome-shell/extensions/
    ```
 3. Restart GNOME Shell:
    - On Xorg: Press `Alt+F2`, type `r`, and press Enter.
