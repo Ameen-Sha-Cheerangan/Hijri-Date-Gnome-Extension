@@ -51,9 +51,6 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
 
 >#### Prerequisites
 >  - If you are new to using gnome-extensions, Search online for understanding how to use gnome extensions for your distro.
->  - Make sure that the extension is supported ( You can check the metadata.json ).
-        >  - To know your gnome shell version you can type ```gnome-shell --version``` , 
-        >  - If the metadata.json lists support for 4x (e.g., 42), then all versions like 4x.y (e.g., 42.9) are also supported.
 >  - For web installation, you may need browser connector support (varies by distribution). 
         
 1. Visit [Hijri Date Extension on extensions.gnome.org](https://extensions.gnome.org/extension/5995/hijri-date-extension/) 
@@ -62,6 +59,12 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
 4. The extension will appear in your top panel automatically.
 
 ### **B. Manual Installation from GitHub**
+
+>#### Prerequisites
+>  - If you are new to using gnome-extensions, Search online for understanding how to use gnome extensions for your distro.
+>  - Make sure that the extension is supported ( You can check the metadata.json ).
+        >  - To know your gnome shell version you can type ```gnome-shell --version``` , 
+        >  - If the metadata.json lists support for 4x (e.g., 42), then all versions like 4x.y (e.g., 42.9) are also supported.
 
 1. Download or clone this repository:
    ```sh
