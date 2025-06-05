@@ -38,7 +38,7 @@ Hijri Date Extension is a GNOME Shell extension that displays the current Hijri 
 
 ## System Requirements
 
-- **GNOME Shell**: Version 42-43
+- **GNOME Shell Version**: 3.36, 3.38, 40, 41, 42, 43, 44
 - **Dependencies**: No additional packages required (SunCalc library included)
 
 ---
