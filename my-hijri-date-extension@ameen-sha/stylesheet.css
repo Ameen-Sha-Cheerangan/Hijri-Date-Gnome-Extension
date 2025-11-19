@@ -1,0 +1,29 @@
+.hijri-date-label {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.dim-label {
+    color: #aaa;
+    /* or use a GNOME-adwaita dim color */
+    font-size: 0.90em;
+}
+
+/* Make links more visible */
+.dim-label a {
+    color: #2682ec;
+    text-decoration: underline;
+}
+
+.dim-label a:hover {
+    color: #e929d6;
+}
