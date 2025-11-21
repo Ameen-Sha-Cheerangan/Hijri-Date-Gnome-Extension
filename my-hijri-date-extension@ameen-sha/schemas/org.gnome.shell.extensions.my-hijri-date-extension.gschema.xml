@@ -26,6 +26,10 @@
             <summary>Panel position</summary>
             <description>Choose whether to display the Hijri date on the left or right side of the panel</description>
         </key>
-
+        <key name="numbering-locale" type="s">
+            <default>'arabic'</default>
+            <summary>Digit Style</summary>
+            <description>Choose between Western digits (123) or Arabic digits (١٢٣).</description>
+        </key>
     </schema>
 </schemalist>
