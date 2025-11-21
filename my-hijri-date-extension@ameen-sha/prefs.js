@@ -9,7 +9,7 @@ export default class MyHijriDatePrefs extends ExtensionPreferences {
 
     fillPreferencesWindow(window) {
         // 1. Use built-in settings method
-        const settings = this.getSettings('org.gnome.shell.extensions.my-hijri-date-extension');
+        const settings = this.getSettings();
         // 2. Load CSS (Fixed for GTK4)
         this._loadCss();
 
@@ -101,6 +101,34 @@ export default class MyHijriDatePrefs extends ExtensionPreferences {
             colorButton
         ));
 
+         // --- NEW SECTION: Numbering Locale ---
+        let numberingContainer = new Gtk.Box({
+            orientation: Gtk.Orientation.HORIZONTAL,
+            halign: Gtk.Align.END,
+            width_request: 150
+        });
+
+        let numberingCombo = new Gtk.ComboBoxText({ hexpand: true });
+        numberingCombo.append('english', 'Western (123)');
+        numberingCombo.append('arabic', 'Arabic (١٢٣)');
+        
+        // Safely get setting or default to english
+        let currentLocale = settings.get_string('numbering-locale') || 'english';
+        numberingCombo.set_active_id(currentLocale);
+
+        numberingCombo.connect('changed', () => {
+            settings.set_string('numbering-locale', numberingCombo.get_active_id());
+        });
+
+        numberingContainer.append(numberingCombo);
+        sizeGroup.add_widget(numberingContainer);
+
+        box.append(this._createRow(
+            "Digit Style",
+            "Choose between Western digits (123) or Arabic digits (١٢٣).",
+            numberingContainer
+        ));
+        // -------------------------------------
         // --- Location entries ---
         let entriesBox = new Gtk.Box({
             orientation: Gtk.Orientation.VERTICAL,
