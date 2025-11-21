@@ -11,7 +11,7 @@ import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
 
 // IMPORTANT: You must ensure your suncalc.js has "export" statements.
 // See the note below this code block.
-import * as SunCalc from './suncalc.cjs';
+import * as SunCalc from './suncalc.js';
 
 const DEFAULT_LATITUDE = 21.4224779;
 const DEFAULT_LONGITUDE = 39.8251832;
