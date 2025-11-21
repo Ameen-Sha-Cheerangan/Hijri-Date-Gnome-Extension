@@ -9,7 +9,7 @@ export default class MyHijriDatePrefs extends ExtensionPreferences {
 
     fillPreferencesWindow(window) {
         // 1. Use built-in settings method
-        const settings = this.getSettings('org.gnome.shell.extensions.my-hijri-date-extension');
+        const settings = this.getSettings();
         // 2. Load CSS (Fixed for GTK4)
         this._loadCss();
 
