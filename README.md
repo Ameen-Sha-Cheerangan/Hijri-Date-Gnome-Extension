@@ -9,7 +9,7 @@
 
 Display the Hijri date in the GNOME top panel.
 
-![Extension in Panel](images/image.png)
+![Extension in Panel](images/image2.png)
 
 
 > **Note:**  
