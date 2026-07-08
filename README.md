@@ -161,8 +161,6 @@ If you find this extension useful:
 - Rate it on [GNOME Extensions](https://extensions.gnome.org/extension/5995/hijri-date-extension/)
 - Share it with others who might benefit
 
-If this tool helped you, consider supporting its development!
-
 ### 🌐 International Users
 You can support me instantly via **Ko-fi**.
 
