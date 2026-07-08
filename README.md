@@ -161,6 +161,30 @@ If you find this extension useful:
 - Rate it on [GNOME Extensions](https://extensions.gnome.org/extension/5995/hijri-date-extension/)
 - Share it with others who might benefit
 
+If this tool helped you, consider supporting its development!
+
+### 🌐 International Users
+You can support me instantly via **Ko-fi**.
+
+<a href="https://ko-fi.com/ameen_sha" target="_blank">
+  <img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_blue.png" alt="Buy Me a Coffee at ko-fi.com" height="36" />
+</a>
+
+### 🇮🇳 Users in India (UPI)
+You can support directly via any UPI app (GPay, PhonePe, Paytm) using the QR code or ID below:
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Ameen-Sha-Cheerangan/.github/main/assets/upi-qr.jpg" alt="UPI QR Code" width="220"/>
+  <br/>
+  <b>UPI ID:</b> <code>ameenshahcheerangan-1@okicici</code>
+</div>
+
+<br/>
+
+> **📱 Viewing on mobile?** 
+> * **Direct Link:** [Click here to open your UPI app](https://upi.pe/ameenshahcheerangan-1@okicici?pn=Ameen+Sha+C)
+> * **Manual Scan:** Take a screenshot of the QR code above and upload it directly inside your UPI app (GPay, PhonePe, Paytm, etc.).
+
 ---
 
 ## License
